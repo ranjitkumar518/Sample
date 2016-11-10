@@ -1,6 +1,0 @@
-# Git Local ignore file local to the repo
-*.bak
-
-# Git to ignore all the files in the tmp directory inside repo
-
-tmp/*
