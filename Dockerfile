@@ -2,12 +2,12 @@
 # Super simple example of a Dockerfile
 #
 FROM ubuntu:latest
-MAINTAINER Andrew Odewahn "odewahn@oreilly.com"
+MAINTAINER Ranjit Kumar "ranjitkumar.518@gmail.com"
 
 RUN apt-get update
-RUN apt-get install -y python python-pip wget
-RUN pip install Flask
+RUN apt-get install -y tomcat
+RUN apt-get install nano
 
-ADD hello.py /home/hello.py
+ADD hii.txt
 
 WORKDIR /home
