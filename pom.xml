@@ -282,25 +282,55 @@
     <finalName>${project.artifactId}</finalName>
     <pluginManagement>
       <plugins>
-       <plugin>
-    <groupId>com.spotify</groupId>
-    <artifactId>docker-maven-plugin</artifactId>
-    <version>0.2.3</version>
-    <executions>
-        <execution>
-            <phase>package</phase>
-            <goals>
-                <goal>build</goal>
-            </goals>
-        </execution>
-    </executions>
-    <configuration>
-        <dockerDirectory>${project.basedir}</dockerDirectory>
-        <imageName>${docker.registry}alooma/${project.artifactId}:${git.commit.id.abbrev}</imageName>
-        <pushImage>true</pushImage>
-    </configuration>
+       <resources>
+    <resource>
+        <directory>${project.basedir}</directory>
+        <filtering>true</filtering>
+        <includes>
+            <include>**/Dockerfile</include>
+        </includes>
+    </resource>
+</resources>
+<pluginManagement>
+    <plugins>
+        <plugin>
+            <groupId>com.spotify</groupId>
+            <artifactId>docker-maven-plugin</artifactId>
+            <version>0.2.3</version>
+            <executions>
+                <execution>
+                    <phase>package</phase>
+                    <goals>
+                        <goal>build</goal>
+                    </goals>
+                </execution>
+            </executions>
+            <configuration>
+                <dockerDirectory>${project.build.directory}/classes</dockerDirectory>
+
+                <pushImage>${push.image}</pushImage>      <!-- true when Jenkins builds, false otherwise -->
+
+                <imageName>${docker.registry}alooma/${project.artifactId}:${git.commit.id.abbrev}</imageName>
+                <resources>
+                    <resource>
+                        <targetPath>/</targetPath>
+                        <directory>${project.basedir}</directory>
+                        <excludes>
+                            <exclude>target/**/*</exclude>
+                            <exclude>pom.xml</exclude>
+                            <exclude>*.iml</exclude>
+                        </excludes>
+                    </resource>
+                    <rescource>
+                        <targetPath>/</targetPath>
+                        <directory>${project.build.directory}</directory>
+                        <include>webgate.war</include>
+                    </rescource>
+                </resources>
+            </configuration>
         </plugin>
-              
+    </plugins>
+</pluginManagement>              
         <plugin>
           <artifactId>maven-clean-plugin</artifactId>
           <version>2.6</version>
