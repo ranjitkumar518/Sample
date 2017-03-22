@@ -283,13 +283,13 @@
     <pluginManagement>
       <plugins>
        <resources>
-    <resource>
+         <resource>
         <directory>${project.basedir}</directory>
         <filtering>true</filtering>
         <includes>
             <include>**/Dockerfile</include>
         </includes>
-    </resource>
+         </resource>
 </resources>
 <pluginManagement>
     <plugins>
