@@ -1,3 +1,7 @@
+<html>
+<p>
 hi
 this is a merge.txt file
 just trying to merge
+</p>
+</html>
