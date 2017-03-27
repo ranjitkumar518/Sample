@@ -34,20 +34,20 @@
   <description>The Jenkins Plugins Parent POM Project</description>
   <inceptionYear>2016</inceptionYear>
 
-  <!-- <scm>
+  <scm>
     <connection>scm:git:ssh://git@github.com/jenkinsci/plugin-pom.git</connection>
     <developerConnection>scm:git:ssh://git@github.com/jenkinsci/plugin-pom.git</developerConnection>
     <tag>HEAD</tag>
-  </scm> -->
+  </scm> 
 
-  <groupId>com.spotify</groupId>
+  <!-- <groupId>com.spotify</groupId>
   <artifactId>docker-maven-plugin</artifactId>
   <version>0.4.14-SNAPSHOT</version>
   <packaging>maven-plugin</packaging>
   <name>docker-maven-plugin</name>
   <description>A maven plugin for docker</description>
   <url>https://github.com/spotify/docker-maven-plugin</url>
-  <inceptionYear>2016</inceptionYear>
+  <inceptionYear>2016</inceptionYear> -->
   <scm>
     <connection>scm:git:https://github.com/ranjitkumar518/myfirstrepo.git</connection>
     <developerConnection>scm:git:git@github.com:ranjitkumar518/myfirstrepo.git</developerConnection>
