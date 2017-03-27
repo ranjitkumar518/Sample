@@ -307,7 +307,7 @@
     <finalName>${project.artifactId}</finalName>
     <pluginManagement>
       <plugins>
-       <resources>
+  <!--     <resources>
     <resource>
         <directory>${project.basedir}</directory>
         <filtering>true</filtering>
@@ -315,7 +315,7 @@
             <include>**/Dockerfile</include>
         </includes>
     </resource>
-</resources>
+</resources> -->
 <pluginManagement>
     <plugins>
         <plugin>
