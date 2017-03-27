@@ -25,8 +25,6 @@
 
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
-<<<<<<< HEAD
-
   <groupId>org.jenkins-ci.plugins</groupId>
   <artifactId>plugin</artifactId>
   <version>2.7-SNAPSHOT</version>
@@ -42,7 +40,6 @@
     <tag>HEAD</tag>
   </scm>
 
-=======
   <groupId>com.spotify</groupId>
   <artifactId>docker-maven-plugin</artifactId>
   <version>0.4.14-SNAPSHOT</version>
@@ -58,7 +55,6 @@
     <tag>HEAD</tag>
   </scm>
   
->>>>>>> master
   <properties>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <project.build.outputEncoding>UTF-8</project.build.outputEncoding>
@@ -97,8 +93,6 @@
     <dependencies>
       <!-- static analysis -->
       <dependency>
-<<<<<<< HEAD
-=======
       <groupId>com.spotify</groupId>
       <artifactId>docker-client</artifactId>
       <version>5.0.1</version>
@@ -110,7 +104,6 @@
       <version>2.0.1</version>
      </dependency>
       <dependency>
->>>>>>> master
         <groupId>com.google.code.findbugs</groupId>
         <artifactId>annotations</artifactId>
         <version>3.0.0</version>
@@ -314,7 +307,6 @@
     <finalName>${project.artifactId}</finalName>
     <pluginManagement>
       <plugins>
-<<<<<<< HEAD
        <resources>
     <resource>
         <directory>${project.basedir}</directory>
@@ -364,7 +356,6 @@
         </plugin>
     </plugins>
 </pluginManagement>              
-=======
         <plugin>
         <groupId>org.sonatype.plugins</groupId>
         <artifactId>nexus-staging-maven-plugin</artifactId>
@@ -376,7 +367,6 @@
           <autoReleaseAfterClose>${autoReleaseAfterClose}</autoReleaseAfterClose>
         </configuration>
         </plugin>
->>>>>>> master
         <plugin>
           <artifactId>maven-clean-plugin</artifactId>
           <version>2.6</version>
