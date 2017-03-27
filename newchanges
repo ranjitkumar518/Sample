@@ -1,4 +1,4 @@
-<html><head>hi</head><body>
+<html><head>hi</head><body><p>
 here is a new file to triggerbuild on update
-</body>
+</p></body>
 </html>
