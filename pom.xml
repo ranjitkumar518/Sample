@@ -25,6 +25,7 @@
 
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
+<<<<<<< HEAD
 
   <groupId>org.jenkins-ci.plugins</groupId>
   <artifactId>plugin</artifactId>
@@ -41,6 +42,23 @@
     <tag>HEAD</tag>
   </scm>
 
+=======
+  <groupId>com.spotify</groupId>
+  <artifactId>docker-maven-plugin</artifactId>
+  <version>0.4.14-SNAPSHOT</version>
+  <packaging>maven-plugin</packaging>
+  <name>docker-maven-plugin</name>
+  <description>A maven plugin for docker</description>
+  <url>https://github.com/spotify/docker-maven-plugin</url>
+  <inceptionYear>2016</inceptionYear>
+  <scm>
+    <connection>scm:git:https://github.com/ranjitkumar518/myfirstrepo.git</connection>
+    <developerConnection>scm:git:git@github.com:ranjitkumar518/myfirstrepo.git</developerConnection>
+    <url>https://github.com/ranjitkumar518/myfirstrepo</url>
+    <tag>HEAD</tag>
+  </scm>
+  
+>>>>>>> master
   <properties>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <project.build.outputEncoding>UTF-8</project.build.outputEncoding>
@@ -79,6 +97,20 @@
     <dependencies>
       <!-- static analysis -->
       <dependency>
+<<<<<<< HEAD
+=======
+      <groupId>com.spotify</groupId>
+      <artifactId>docker-client</artifactId>
+      <version>5.0.1</version>
+      <classifier>shaded</classifier>
+     </dependency>
+     <dependency>
+      <groupId>org.apache.jclouds.api</groupId>
+      <artifactId>docker</artifactId>
+      <version>2.0.1</version>
+     </dependency>
+      <dependency>
+>>>>>>> master
         <groupId>com.google.code.findbugs</groupId>
         <artifactId>annotations</artifactId>
         <version>3.0.0</version>
@@ -282,6 +314,7 @@
     <finalName>${project.artifactId}</finalName>
     <pluginManagement>
       <plugins>
+<<<<<<< HEAD
        <resources>
     <resource>
         <directory>${project.basedir}</directory>
@@ -331,6 +364,19 @@
         </plugin>
     </plugins>
 </pluginManagement>              
+=======
+        <plugin>
+        <groupId>org.sonatype.plugins</groupId>
+        <artifactId>nexus-staging-maven-plugin</artifactId>
+        <version>1.6.4</version>
+        <extensions>true</extensions>
+        <configuration>
+          <serverId>ossrh</serverId>
+          <nexusUrl>https://oss.sonatype.org/</nexusUrl>
+          <autoReleaseAfterClose>${autoReleaseAfterClose}</autoReleaseAfterClose>
+        </configuration>
+        </plugin>
+>>>>>>> master
         <plugin>
           <artifactId>maven-clean-plugin</artifactId>
           <version>2.6</version>
