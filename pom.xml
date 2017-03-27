@@ -307,17 +307,17 @@
     <finalName>${project.artifactId}</finalName>
     <pluginManagement>
       <plugins>
+       <plugin>
     <resources>
     <resource>
-       <!-- <directory>${project.basedir}</directory>
-        <filtering>true</filtering> -->
+       <directory>${project.basedir}</directory>
+        <filtering>true</filtering> 
         <includes>
             <include>**/Dockerfile</include>
         </includes>
     </resource>
 </resources> 
-<pluginManagement>
-    <plugins>
+    </plugin>
         <plugin>
             <groupId>com.spotify</groupId>
             <artifactId>docker-maven-plugin</artifactId>
@@ -353,9 +353,7 @@
                     </rescource>
                 </resources>
             </configuration>
-        </plugin>
-    </plugins>
-</pluginManagement>              
+        </plugin>            
         <plugin>
         <groupId>org.sonatype.plugins</groupId>
         <artifactId>nexus-staging-maven-plugin</artifactId>
