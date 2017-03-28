@@ -305,18 +305,6 @@
       not to have version number in the .hpi file name.
     -->
     <finalName>${project.artifactId}</finalName>
-    <pluginManagement>
-      <plugins>
-       <plugin>
-    <groupId>org.apache.maven.plugins</groupId>
-    <artifactId>maven-compiler-plugin</artifactId>
-    <version>3.1</version>
-    <configuration>
-      <source>1.5</source>
-      <target>1.5</target>
-    </configuration>
-  </plugin>
-       <plugin>
     <resources>
     <resource>
        <directory>${project.basedir}</directory>
@@ -326,6 +314,10 @@
         </includes>
     </resource>
 </resources> 
+    <pluginManagement>
+      <plugins>
+       <plugin>
+   
     </plugin>
         <plugin>
             <groupId>com.spotify</groupId>
