@@ -92,7 +92,13 @@
   <dependencyManagement>
     <dependencies>
       <!-- static analysis -->
-      <dependency>
+     <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-dependency-plugin -->
+<dependency>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-dependency-plugin</artifactId>
+    <version>3.0.0</version>
+</dependency> 
+     <dependency>
       <groupId>com.spotify</groupId>
       <artifactId>docker-client</artifactId>
       <version>5.0.1</version>
@@ -316,9 +322,6 @@
 </resources> 
     <pluginManagement>
       <plugins>
-       <plugin>
-   
-    </plugin>
         <plugin>
             <groupId>com.spotify</groupId>
             <artifactId>docker-maven-plugin</artifactId>
