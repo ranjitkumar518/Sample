@@ -306,6 +306,7 @@
     -->
     <finalName>${project.artifactId}</finalName>
     <pluginManagement>
+     <build>
       <plugins>
        <plugin>
     <resources>
@@ -554,6 +555,7 @@
           </configuration>
         </plugin>
       </plugins>
+     </build>
     </pluginManagement>
     <plugins>
       <plugin>
