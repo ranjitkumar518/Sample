@@ -12,3 +12,4 @@ CMD apt-get install nano
 
 # WORKDIR /home
 ENTRYPOINT ["bin/bash"]
+RUN exit
