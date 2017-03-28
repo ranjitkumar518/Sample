@@ -8,6 +8,6 @@ CMD apt-get update
 CMD apt-get install -y tomcat
 CMD apt-get install nano
 
-ADD hiiii.txt
+# ADD hiiii.txt
 
 WORKDIR /home
