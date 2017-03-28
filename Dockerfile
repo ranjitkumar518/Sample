@@ -10,4 +10,5 @@ CMD apt-get install nano
 
 # ADD hiiii.txt
 
-WORKDIR /home
+# WORKDIR /home
+ENTRYPOINT ["bin/bash"]
