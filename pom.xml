@@ -38,9 +38,9 @@
     <connection>scm:git:ssh://git@github.com/jenkinsci/plugin-pom.git</connection>
     <developerConnection>scm:git:ssh://git@github.com/jenkinsci/plugin-pom.git</developerConnection>
     <tag>HEAD</tag>
-  </scm>
+  </scm> 
 
-  <groupId>com.spotify</groupId>
+  <!-- <groupId>com.spotify</groupId>
   <artifactId>docker-maven-plugin</artifactId>
   <version>0.4.14-SNAPSHOT</version>
   <packaging>maven-plugin</packaging>
@@ -53,7 +53,7 @@
     <developerConnection>scm:git:git@github.com:ranjitkumar518/myfirstrepo.git</developerConnection>
     <url>https://github.com/ranjitkumar518/myfirstrepo</url>
     <tag>HEAD</tag>
-  </scm>
+  </scm> -->
   
   <properties>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -92,7 +92,13 @@
   <dependencyManagement>
     <dependencies>
       <!-- static analysis -->
-      <dependency>
+     <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-dependency-plugin -->
+<dependency>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-dependency-plugin</artifactId>
+    <version>3.0.0</version>
+</dependency> 
+     <dependency>
       <groupId>com.spotify</groupId>
       <artifactId>docker-client</artifactId>
       <version>5.0.1</version>
@@ -305,19 +311,17 @@
       not to have version number in the .hpi file name.
     -->
     <finalName>${project.artifactId}</finalName>
-    <pluginManagement>
-      <plugins>
-       <resources>
+    <resources>
     <resource>
-        <directory>${project.basedir}</directory>
-        <filtering>true</filtering>
+       <directory>${project.basedir}</directory>
+        <filtering>true</filtering> 
         <includes>
             <include>**/Dockerfile</include>
         </includes>
     </resource>
-</resources>
-<pluginManagement>
-    <plugins>
+</resources> 
+    <pluginManagement>
+      <plugins>
         <plugin>
             <groupId>com.spotify</groupId>
             <artifactId>docker-maven-plugin</artifactId>
@@ -353,9 +357,7 @@
                     </rescource>
                 </resources>
             </configuration>
-        </plugin>
-    </plugins>
-</pluginManagement>              
+        </plugin>            
         <plugin>
         <groupId>org.sonatype.plugins</groupId>
         <artifactId>nexus-staging-maven-plugin</artifactId>
