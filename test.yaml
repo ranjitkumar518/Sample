@@ -1,0 +1,21 @@
+- job:
+    name: test_job
+    description: 'Automatically generated test job'
+    project-type: freestyle
+    scm:
+      - git:
+         url: http://github.com/ranjitkumar518/myfirstrepo.git
+         Credentials:
+            Domain: 'Global credentials'
+            Kind: 'Username with password'
+            Username: 'ranjitkumar518'
+            Password: 'Ranjit020790'
+         branches:
+            - master
+            - develop
+         # browser: githubweb
+         # browser-url: http://github.com/ranjitkumar518/myfirstrepo.git
+         #  timeout: 20
+    builders:
+      - shell: 'ls -la'
+      - shell: 'echo "hello"'
